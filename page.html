@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studik — Платформа онлайн-обучения</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Studik</div>
+        <nav class="nav">
+            <a href="#courses">Курсы</a>
+            <a href="#add-course-section">Добавить курс</a>
+        </nav>
+        <button id="theme-toggle" class="btn-theme" aria-label="Переключить тему">🌓 Тема</button>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Учись уверенно вместе с Studik</h1>
+            <p>Инвестируй в свое будущее: проверенные курсы от лучших экспертов.</p>
+        </section>
+
+        <section id="courses" class="courses-section">
+            <h2>Доступные курсы</h2>
+            <div id="courses-grid" class="courses-grid"></div>
+            <button id="load-more" class="btn-primary">Показать еще</button>
+        </section>
+
+        <section id="add-course-section" class="form-section">
+            <h2>Разместить свой курс на Studik</h2>
+            <form id="course-form" class="custom-form" novalidate>
+                <div class="form-group">
+                    <label for="course-title">Название курса:</label>
+                    <input type="text" id="course-title" required minlength="3">
+                    <span class="error-msg">Название должно быть не короче 3 символов</span>
+                </div>
+                <div class="form-group">
+                    <label for="course-price">Стоимость (₽):</label>
+                    <input type="number" id="course-price" required min="0">
+                    <span class="error-msg">Укажите корректную цену</span>
+                </div>
+                <div class="form-group">
+                    <label for="course-rating">Оценка курса (от 1 до 5):</label>
+                    <input type="number" id="course-rating" required min="1" max="5" step="0.1">
+                    <span class="error-msg">Введите оценку от 1 до 5</span>
+                </div>
+                <div class="form-group">
+                    <label for="course-author">Автор / Email для связи:</label>
+                    <input type="email" id="course-author" required>
+                    <span class="error-msg">Введите корректный email автора</span>
+                </div>
+                <button type="submit" class="btn-submit">Добавить курс на сайт</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2026 Studik. Все права защищены. Образовательная платформа нового поколения.</p>
+    </footer>
+    <script src="page.js"></script>
+</body>
+</html>
